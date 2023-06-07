@@ -2,10 +2,9 @@
   "name": "box-office",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://shelooks16.github.io/box-office-app",
+  "homepage": "https://Samhitha-2001.github.io/Box-office-application",
   "dependencies": {
     "@tanstack/react-query": "^4.16.1",
-    "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.3",
@@ -31,8 +30,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "format": "prettier --write src/**/*.{js,jsx}",
+    "format:lint": "npm run format && npm run lint",
+    "clear": "rimraf build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "npm run build && surge ./build/ box-office-movies-actors-search-app.surge.sh"
   },
   "eslintConfig": {
     "extends": [
@@ -57,6 +58,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^5.0.0",
     "prettier": "^2.7.1"
   },
   "main": "index.js",
